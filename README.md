@@ -1,7 +1,5 @@
 # Web Scraper Chrome Extension
 
-![Web Scraper Logo](path/to/logo.png)
-
 ## Overview
 
 The **Web Scraper Chrome Extension** is a powerful tool designed to extract essential content from web pages quickly and efficiently. With the ability to scrape titles, body text, images, headers, subheaders, and links, this extension provides users with the data they need for analysis, research, or content creation.
