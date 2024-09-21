@@ -1,50 +1,87 @@
-# React + TypeScript + Vite
+# Web Scraper Chrome Extension
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Web Scraper Logo](path/to/logo.png)
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The **Web Scraper Chrome Extension** is a powerful tool designed to extract essential content from web pages quickly and efficiently. With the ability to scrape titles, body text, images, headers, subheaders, and links, this extension provides users with the data they need for analysis, research, or content creation.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Title Extraction**: Capture the title of the web page.
+- **Body Text Scraping**: Retrieve all text content from the body of the page.
+- **Image URLs**: Collect URLs of all images displayed on the page.
+- **Headers and Subheaders**: Extract all headers (h1, h2, h3) for better content structuring.
+- **Links Collection**: Gather all hyperlinks present on the page for easy access.
+- **User-Friendly Interface**: Intuitive and simple to use, designed for users of all skill levels.
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Prerequisites
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Google Chrome or any Chromium-based browser
+- Node.js and npm
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Clone the Repository
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+```bash
+git clone https://github.com/yourusername/web-scraper.git
+cd web-scraper
+Install Dependencies
+bash
+npm install
+Build the Extension
+bash
+npm run build
+Load the Extension
+Open Chrome and go to chrome://extensions/.
+Enable "Developer mode" by toggling the switch in the upper right corner.
+Click "Load unpacked" and select the dist folder of the project.
+Usage
+Click the Web Scraper icon in your Chrome toolbar.
+Navigate to the web page you want to scrape.
+Click the "Scrape Page" button in the extension popup.
+View the extracted data displayed in the popup.
+API Integration
+The scraped data can be sent to a server for further processing. The default server endpoint is set to http://localhost:5000/scrape. Ensure you have a Flask backend running to handle the scraped data.
+
+Flask Backend Setup
+To set up the backend, follow these steps:
+
+Navigate to the backend directory.
+
+Install Flask and CORS:
+
+bash
+pip install Flask flask-cors
+Run the Flask server:
+
+bash
+python app.py
+Contributing
+We welcome contributions to improve the Web Scraper Chrome Extension! To contribute:
+
+Fork the repository.
+Create a new branch:
+bash
+git checkout -b feature/YourFeature
+Make your changes and commit them:
+bash
+
+git commit -m "Add your message"
+Push to the branch:
+bash
+
+git push origin feature/YourFeature
+Create a pull request.
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Acknowledgments
+Inspired by web scraping tools and technologies.
+Special thanks to the open-source community for their invaluable contributions.
+Contact
+For questions or inquiries, please contact:
+
+Name: Ernesto
+GitHub: edonado2
