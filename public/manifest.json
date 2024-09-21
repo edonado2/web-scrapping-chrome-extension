@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Simple web Scrapping",
+    "description": "A Chrome extension that scrapes data from web pages",
+    "version": "1.0",
+    "action": {
+      "default_popup": "index.html",
+      "default_title": "Web Scraper"
+    },
+    "permissions": ["activeTab", "scripting"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "16": "./icons/icon16.png"
+    }
+  }
+  

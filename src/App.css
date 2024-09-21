@@ -1,0 +1,104 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8; /* Softer background for better contrast */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container for the main content */
+.container {
+  max-width: 450px; /* Slightly wider for better content display */
+  margin: 20px auto; /* Add some space around the container */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+/* Title styling */
+h1 {
+  text-align: center;
+  color: #007BFF;
+  font-size: 28px; /* Larger title for better emphasis */
+  margin-bottom: 15px;
+  font-weight: 600; /* Semi-bold for better readability */
+}
+
+/* Button styles */
+button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  font-size: 18px; /* Slightly larger font for buttons */
+  color: #09881a;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* Subtle shadow */
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px); /* Slightly higher lift effect */
+}
+
+button:active {
+  background-color: #004494;
+  transform: translateY(0); /* Reset on active */
+}
+
+/* Styled output for scraped data */
+.output {
+  margin-top: 25px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraph styling for scraped data */
+.output p {
+  margin: 0;
+  color: #555;
+  word-break: break-word;
+}
+
+/* Additional styling for headings in output */
+.output h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Images styling */
+.images {
+  margin-top: 10px;
+}
+
+.scraped-image {
+  max-width: 100%;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  button {
+    font-size: 16px; /* Adjust button size for smaller screens */
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
