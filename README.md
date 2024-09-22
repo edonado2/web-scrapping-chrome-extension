@@ -24,62 +24,66 @@ The **Web Scraper Chrome Extension** is a powerful tool designed to extract esse
 
 ```bash
 git clone https://github.com/yourusername/web-scraper.git
+```
+```bash
 cd web-scraper
-Install Dependencies
-bash
+```
+# Install Dependencies
+```bash
 npm install
-Build the Extension
-bash
+```
+# Build the Extension
+```bash
 npm run build
-Load the Extension
+```
+# Load the Extension
 Open Chrome and go to chrome://extensions/.
 Enable "Developer mode" by toggling the switch in the upper right corner.
 Click "Load unpacked" and select the dist folder of the project.
-Usage
+# Usage
 Click the Web Scraper icon in your Chrome toolbar.
 Navigate to the web page you want to scrape.
 Click the "Scrape Page" button in the extension popup.
 View the extracted data displayed in the popup.
-API Integration
+# API Integration
 The scraped data can be sent to a server for further processing. The default server endpoint is set to http://localhost:5000/scrape. Ensure you have a Flask backend running to handle the scraped data.
 
-Flask Backend Setup
+# Flask Backend Setup
 To set up the backend, follow these steps:
 
 Navigate to the backend directory.
 
 Install Flask and CORS:
 
-bash
+```bash
 pip install Flask flask-cors
-Run the Flask server:
+```
+# Run the Flask server:
 
-bash
+```bash
 python app.py
-Contributing
+```
+# Contributing
 We welcome contributions to improve the Web Scraper Chrome Extension! To contribute:
 
-Fork the repository.
+# Fork the repository.
 Create a new branch:
-bash
+```bash
 git checkout -b feature/YourFeature
+```
 Make your changes and commit them:
-bash
-
+```bash
 git commit -m "Add your message"
-Push to the branch:
-bash
+```
+# Push to the branch:
+```bash
 
 git push origin feature/YourFeature
+```
 Create a pull request.
-License
+# License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Acknowledgments
+# Acknowledgments
 Inspired by web scraping tools and technologies.
 Special thanks to the open-source community for their invaluable contributions.
-Contact
-For questions or inquiries, please contact:
-
-Name: Ernesto
-GitHub: edonado2

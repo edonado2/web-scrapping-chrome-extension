@@ -1,14 +1,16 @@
 import { useState } from 'react';
 import './App.css';
 
+interface data {
+  title: string;
+  bodyText: string;
+  images: string[];
+  headers: string[];
+  links: string[];
+}
+
 function App() {
-  const [scrapedData, setScrapedData] = useState<{
-    title: string;
-    bodyText: string;
-    images: string[];
-    headers: string[];
-    links: string[];
-  } | null>(null);
+  const [scrapedData, setScrapedData] = useState< data | null>(null);
 
   const handleScrape = async () => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -29,13 +31,7 @@ function App() {
             'headers' in data &&
             'links' in data
           ) {
-            sendToServer(data as {
-              title: string;
-              bodyText: string;
-              images: string[];
-              headers: string[];
-              links: string[];
-            });
+            sendToServer(data as data);
           } else {
             console.error('No data scraped or incorrect format.');
           }
@@ -45,13 +41,7 @@ function App() {
   };
 
   const scrapePage = () => {
-    return new Promise<{
-      title: string;
-      bodyText: string;
-      images: string[];
-      headers: string[];
-      links: string[];
-    }>((resolve) => {
+    return new Promise<data>((resolve) => {
       const observer = new MutationObserver(() => {
         const title = document.title || '';
         const bodyText = document.body.innerText || '';
