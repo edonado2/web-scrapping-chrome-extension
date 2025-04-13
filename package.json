@@ -8,7 +8,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "build": "vite build && npm run copy",
-     "copy": "copyfiles -u 1 src/manifest.json src/icons/* src/content.js src/background.js dist/"
+    "copy": "if not exist dist\\icons mkdir dist\\icons && copyfiles -u 1 src/manifest.json dist/ && copyfiles -u 2 src/icons/icon16.png dist/icons/ && copyfiles -u 1 src/content.js dist/ && copyfiles -u 1 src/background.js dist/"
   },
   "dependencies": {
     "react": "^18.3.1",
